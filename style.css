@@ -185,24 +185,102 @@ nav a{
 /***************** SECTION Gallery *********************/ 
 
 .gallery { 
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-
+    padding: 200px 0px;
 }
+
+
+
+.gallery_content {
+    padding: 100px;
+}
+
+
+.responsive-image {
+  max-width: 100%;
+}
+
+.cell img {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.cell {
+  margin: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .cell {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(33.3333% - 2rem);
+  }
+}
+
+
+.cell { 
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+    transition: all .2s ease-in-out; }
+.cell:hover { transform: scale(1.6);
+opacity: 1;
+    z-index: 99;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+
+
 /***************** SECTION CONTACT *********************/ 
 .contact {
     height: 100vh;
     width: 100%;
-    background-color: #75cf41en;
+    background-color: rgba(117, 207, 65, 0.5);
     display: block;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .map {
     display: inline-block;
     margin: 5%;
 }
+
+.contact_info {
+    width: 30%;
+    margin: 5%;
+    font-size: 24px;
+}
+
+/************ Lightbox *****************/
 
 /***************** MEDIA QUERIES *********************/ 
 
@@ -216,6 +294,7 @@ nav ul{
 nav li{
   min-width: 200px;
   font-size: 20px;
+    font-family: 'arial';
 }
     
 } 
@@ -231,6 +310,11 @@ nav li{
     
     .offer_list ul li {
         font-size: 26px;
+    }
+    
+    .map iframe {
+        width: 700px;
+        height: 600px;
     }
 }
 
