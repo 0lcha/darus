@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+}
+
+/***************** SECTION Header + menu *********************/ 
+header {
+    background-image: url("header_image.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+}
+
+.logo img {
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/*nav{
+  background: #333;
+}*/
+
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  display: block;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.menu a:hover{
+  background-color: #288D3E;
+    color: #fff;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 58, 13, 0.5);
+  color: #eee !important;
+    /* Firefox */
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 1s ease-in;
+    z-index: 5;
+}
+
+.sticky a:hover {
+    color: #eee !important;
+    background-color: none !important;
+}
+
+.sticky + .content {
+  padding-top: 500px;
+}
+
+/***************** SECTION INFO *********************/ 
+
+.info {
+    height: 100vh;
+    width: 100%;
+    padding: 50px 0px;
+    position: relative;
+    
+}
+
+.info_content {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.info_recycle {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.info_recycle img {
+    width: 55%;
+}
+
+
+.info_info {
+    font-size: 30px;
+    width: 30%;
+    height: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: #75cf41;
+    padding: 30px;
+    position: absolute;
+    color: #eee;
+    left: 55%;
+    top: 50%;
+  
+}
+
+
+/***************** SECTION OFFER *********************/ 
+
+.offer {
+    
+    height: 100vh;
+    font-family: 'sans-serif', sans-serif;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+       background-image: linear-gradient( rgba(117, 207, 65, 0.71), rgba(117, 207, 65, 0.7) ), url(http://rekfol.mielec.pl/media/img/top1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+}
+.offer_list {
+    background-color: #eee;
+    text-align: center;
+    font-size: 32px;
+}
+.offer_list h2, h3 {
+    text-align: center;
+    color: white;
+}
+
+.offer_list ul {
+    display: flex;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+.offer_list ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100px;
+    /*background-color: red;*/
+    width: 20%;
+    font-size: 32px; 
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    color: white;
+
+}
+
+.offer_list ul li:hover {
+    color: black;
+    background-color: white;
+}
+
+.offer_left ul li:nth-child(1), .offer_left ul li:nth-child(3), .offer_right ul li:nth-child(2), .offer_right ul li:nth-child(4) {
+    border: 10px solid white;
+    border-top: none;
+}
+.offer_left ul li:nth-child(2), .offer_right ul li:nth-child(3) {
+    border-top:  10px solid white;
+}
+
+.offer_left ul li:nth-child(4) {
+    border-top:  10px solid white;
+    border-right:  10px solid white;
+}
+
+.offer_right ul li:nth-child(1) {
+    border-top:  10px solid white;
+    border-left:  10px solid white;
+}
+/***************** SECTION Gallery *********************/ 
+
+.gallery { 
+    height: 100vh;
+    width: 100%;
+
+}
+/***************** SECTION CONTACT *********************/ 
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-color: #75cf41en;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.map {
+    display: inline-block;
+    margin: 5%;
+}
+
+/***************** MEDIA QUERIES *********************/ 
+
+@media screen and (min-width: 768px){
+
+nav ul{
+  display: flex;
+    justify-content: center;
+}
+
+nav li{
+  min-width: 200px;
+  font-size: 20px;
+}
+    
+} 
+
+@media screen and (max-width: 1800px) {
+    .info_recycle img {
+        width: 60%;
+    }
+    
+    .info_info {
+        font-size: 24px;
+    }
+    
+    .offer_list ul li {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 1950px) {
+    .info_info{
+        font-size: 45px;
+        padding: 50px;
+    }
+}

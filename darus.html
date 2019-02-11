@@ -1,0 +1,98 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+	<link rel="Stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,800i" rel="stylesheet"> 
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div id="Logo" class="logo">
+                <img src="logo.png" width="300px">
+            </div>
+            <nav id="navbar" class="menu">
+                <ul>
+                  <li><a href="#info">O firmie</a></li>
+                  <li><a href="#offer">Oferta</a></li>
+                  <li><a href="#gallery">Galeria</a></li>
+                  <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+            <main>
+                <section id="info" class="info">
+                        <div class="info_recycle">
+                            <img src="folia.jpg">
+                        </div>
+                        <div class="info_info"><p>Firma została założona w 1992 roku jako usługowo-transportowa.
+                        W 1998 r. profil działaności uległ zmianie na odzysk, recykling oraz produkcję folii polietylenowej.</p></div>
+
+                </section>
+
+                <section id="offer" class="offer">
+                    <div class="offer_content">
+                        <div class="offer_list offer_left">
+                            <h2>Produkty</h2>
+                            <h3>Folia polietylenowa:</h3>
+                            <ul>
+                                <li>Rękaw</li>
+                                <li>Pólrękaw</li>
+                                <li>Taśma</li>
+                                <li>Worki foliowe</li>
+                            </ul>
+                        </div>
+                        <div class="offer_list offer_right">
+                            <h2>Usługi</h2>
+                             <ul>
+                                <li>Segregacja odpadów tworzyw sztucznych</li>
+                                <li>Odzysk i recykling surowców</li>
+                                <li>Regulacja tworzy PE, HDPE, LDPE</li>
+                                <li>rozdmuch folii PE</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>    
+
+                <section id="gallery" class="gallery">
+                </section> 
+
+                <section id="contact" class="contact">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10305.332650522332!2d18.8317142!3d49.7797994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x369475a16ad7012f!2sDarus!5e0!3m2!1spl!2spl!4v1549910177862" width="900" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </main>
+        <footer>
+        </footer>
+        
+        <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if ($(window).scrollTop() >= 250) {
+    navbar.classList.add("sticky");
+      navbar.classList.remove("menu");
+  } else {
+    navbar.classList.remove("sticky");
+    navbar.classList.add("menu");
+  }
+}
+            /* Smooth Scroll */
+                $("a[href^='#']").click(function(e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top;
+
+        $("body, html").animate({
+            scrollTop: position
+        } /* speed */ );
+    });
+            
+
+</script>
+    </body>
+</html>
